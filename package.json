@@ -1,0 +1,27 @@
+{
+  "name": "neo-debug",
+  "version": "0.0.1",
+  "author": "Bret Copeland <bret@atlantisflight.org>",
+  "description": "A more configurable debug utility module.",
+  "contributors": [
+    {
+      "name": "Bret Copeland",
+      "email": "bret@atlantisflight.org"
+    }
+  ],
+  "main": "./lib/neo-debug.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bretcope/neo-debug.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "debug": "~0.8.0"
+  },
+  "keywords": [
+    "debug",
+    "log",
+    "debugger"
+  ],
+  "license": "MIT"
+}
