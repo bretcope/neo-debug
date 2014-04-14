@@ -2,6 +2,10 @@
 
 neo-debug is a configurable Node.js debug utility. Its intent is to be a more flexible version of the [visionmedia/debug](https://github.com/visionmedia/debug) module while maintaining much of the same simplicity, and a similar output format.
 
+```
+npm install neo-debug
+```
+
 Some notable features are:
 
 1. Change the namespace/prefix filter at runtime.
