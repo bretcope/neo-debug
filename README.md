@@ -137,6 +137,7 @@ property `isTTY` set to `true`, neo-debug would write to it in TTY mode instead.
   examples:stderr this will output to stderr
 flushing buffer...
 2014-04-14T06:41:09.915Z examples:custom-output this will be written to the SimpleStream buffer
+*/
 ```
 
 <a name="reference"></a>
