@@ -176,9 +176,7 @@ Accepted values: `none, white, grey, black, red, green, yellow, blue, magenta, c
 <a name="reference-options-color"></a>
 #### color
 
-___individual config only___
-
-> String - defaults to next color in the global colors property
+> ___individual config only___ - String - defaults to next color in the global colors property
 
 Sets the color used in TTY output.
 
@@ -187,9 +185,7 @@ Accepted values: `none, white, grey, black, red, green, yellow, blue, magenta, c
 <a name="reference-options-colors"></a>
 #### colors
 
-___global config only___
-
-> Array of Strings - default: ['red', 'blue', 'green', 'magenta', 'cyan', 'grey']
+> ___global config only___ - Array of Strings - default: ['red', 'blue', 'green', 'magenta', 'cyan', 'grey']
 
 The array of colors which will be used when a debugger does not explicitly specify a color. For each new debugger, neo-debug simply selects the next color in the list. When it gets to the end of the list, it will recycle to the beginning.
 
@@ -203,9 +199,7 @@ Normally, only the debugger namespace/prefix and the time difference suffix (if 
 <a name="reference-options-enable"></a>
 #### enable
 
-___individual config only___
-
-> Boolean - default: undefined
+> ___individual config only___ - Boolean - default: undefined
 
 Allows the debugger to override the global filter. If set to `true`, the debugger will output even if it is not included or excluded from the global filter. If set to `false`, the debugger will not output, even if it is included in the global filter.
 
@@ -221,25 +215,21 @@ Allows the output to be sent to another file descriptor or stream interface inst
 <a name="reference-options-filter"></a>
 #### filter
 
-___global config only___
-
-> String - default: process.env.DEBUG
+> ___global config only___ - String - default: process.env.DEBUG
 
 Determines which debuggers should output and which should be silent. See [Filter Format](#reference-filter). This can be configured before runtime by using the `DEBUG` environment variable.
 
 <a name="reference-options-plain"></a>
 #### plain
 
-___individual config only___
-
-> Boolean - default: true
+> ___individual config only___ - Boolean - default: true
 
 If false, the debugger will not output when in plain-text mode.
 
 <a name="reference-options-prefix"></a>
 #### prefix
 
-___individual config only___
+> ___individual config only___ - String
 
 This allows the prefix to be changed after creation. For example:
 
@@ -276,9 +266,7 @@ none  Does not output any datetime information
 <a name="reference-options-tty"></a>
 #### tty
 
-___individual config only___
-
-> Boolean - default: true
+> ___individual config only___ - Boolean - default: true
 
 If false, the debugger will not output when in TTY mode.
 
