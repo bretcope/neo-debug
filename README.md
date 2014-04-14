@@ -94,13 +94,16 @@ var neoDebug = require('../lib/neo-debug');
 neoDebug.filter = 'examples:*';
 
 /*
-neo-debug writes to stdout by default. If we want to write to stderr instead, we can use the fd property
+neo-debug writes to stdout by default. If we want to write to stderr instead, 
+we can use the fd property
  */
 var stderr = neoDebug('examples:stderr', { fd: 'stderr' });
 stderr('this will output to stderr');
 
 /*
-If we want to output to something other than stdout or stderr, we can pass any object with a `write` function which accepts a single string argument.
+If we want to output to something other than stdout or stderr, we can pass any 
+object with a `write` function which accepts a single string argument.
+
 Let's setup a mock stream class...
  */
 function SimpleStream ()
@@ -126,7 +129,8 @@ custom('this will be written to the SimpleStream buffer');
 stream.flush();
 
 /*
-Note that neo-debug writes to our stream in plain-text mode. If our stream object had the property `isTTY` set to `true`, neo-debug would write to it in TTY mode instead.
+Note that neo-debug writes to our stream in plain-text mode. If our stream object had the 
+property `isTTY` set to `true`, neo-debug would write to it in TTY mode instead.
  */
 
 /*
@@ -257,9 +261,9 @@ Determines which time format (if any) to use in the different output modes. An o
 Available Formats:
 
 ```
-iso   Prefixes the output with the ISO timestamp. ex: "2014-04-14T06:26:21.581Z"
-utc   Prefixes the output with the UTC timestamp. ex: "Mon, 14 Apr 2014 07:42:04 GMT"
-diff  Outputs the time since the last output as a suffix to the output.
+iso   Prefixes the output with the ISO timestamp. example: "2014-04-14T06:26:21.581Z"
+utc   Prefixes the output with the UTC timestamp. example: "Mon, 14 Apr 2014 07:42:04 GMT"
+diff  Outputs the time since the last output as a suffix to the output. example: "+2ms"
 none  Does not output any datetime information
 ```
 
