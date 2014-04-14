@@ -35,7 +35,7 @@ Some notable features are:
 <a name="examples"></a>
 ## Examples
 
-> see the `/examples` directory for more
+> see the [/examples](https://github.com/bretcope/neo-debug/tree/master/examples) directory for more
 
 <a name="examples-simple"></a>
 ### Simple
@@ -290,7 +290,7 @@ It is a comma or space separated list which supports the wildcard `*` character.
 
 For its additional configurability and features, neo-debug pays some performance cost compared to the debug module. When actually outputting to the console, the performance difference between debug and neo-debug is about 5%. When not outputting anything (silent/NOOP mode), the debug module performs about 3.5x faster; however, this difference is in the tens of nanoseconds per call (about 20 on my Core i7-4770K), and it's very unlikely the difference would even be measurable in a production system unless the number of calls to debug was enormous.
 
-Here are some benchmark test results (see `examples/debug-vs-neo.js` for the code):
+Here are some benchmark test results (see [examples/debug-vs-neo.js](https://github.com/bretcope/neo-debug/blob/master/examples/debug-vs-neo.js) for the code):
 
 ```
 neo-d (tty) performed 10,000 operations in 3.6714 seconds (2,724 ops/sec)
