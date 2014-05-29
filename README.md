@@ -33,6 +33,7 @@ Some notable features are:
         * [time](#reference-options-time)
         * [tty](#reference-options-tty)
     * [Filter Format](#reference-filter)
+    * [Add and Remove Filters](#add-and-remove-filters)
 * [Performance](#performance)
 * [License](#license)
 
@@ -281,6 +282,44 @@ If false, the debugger will not output when in TTY mode.
 neo-debug uses the exact same filter format as [visionmedia/debug](https://github.com/visionmedia/debug#wildcards). This means you can easily configure both debug and neo-debug at the same time which may be handy if you have dependencies which use debug.
 
 It is a comma or space separated list which supports the wildcard `*` character. To exclude a pattern, prefix it with a minus `-` sign. `DEBUG=connect:*` would include all debuggers which begin with `connect:`. `DEBUG=* -connect:*` would include all debuggers except those which begin with `connect:`.
+
+<a name="add-and-remove-filters"></a>
+### Add and Remove Filters
+
+If you would like to add and remove filters without affecting any previously applied filters, you can use the `neoDebug.addFilter(pattern, [exclude])` method.
+
+```javascript
+var neoDebug = require('neo-debug');
+var debug = neoDebug('example:one');
+
+neoDebug.addFilter('example:*');
+
+//to exclude a pattern, send true as the second argument
+neoDebug.addFilter('example:quiet', true);
+```
+
+To remove the filters we just added, use `neoDebug.removeFilter(pattern, [exclude])`. It returns true if the pattern was found and removed, otherwise false.
+
+```javascript
+neoDebug.removeFilter('example:*');
+neoDebug.removeFilter('example:quiet', true);
+```
+
+> There is some overhead involved every time you add or remove filters, so it is best to avoid calling these methods repeatedly.
+
+You can also get a list of current filters by calling `neoDebug.getFilters()`.
+
+```javascript
+console.log(neoDebug.getFilters());
+/*
+{
+  includes: ['example:*'],
+  excludes: ['example:quiet']
+}
+*/
+```
+
+There is also a `neoDebug.hasFilter(pattern, [inExcludes])` which returns true if the filter already exists.
 
 <a name="performance"></a>
 ## Performance
