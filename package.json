@@ -1,6 +1,6 @@
 {
   "name": "neo-debug",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Bret Copeland <bret@atlantisflight.org>",
   "description": "A more configurable debug utility module.",
   "contributors": [
